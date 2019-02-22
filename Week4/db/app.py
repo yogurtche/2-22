@@ -1,5 +1,5 @@
 from flask import Flask
-from alchemy import db
+from ext import db
 
 
 app FLask(_name_)
