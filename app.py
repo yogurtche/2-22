@@ -2,10 +2,10 @@ from flask import Flask
 from ext import db
 
 
-app FLask(_name_)
-app.config["SQLALCHEMY_DATABASE_URI"]='slqlite:///test1.db'
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"]=True
+app = Flask(__name__)
 
+app.config["SQLALCHEMY_DATABASE_URI"]='sqlite:///test1.db'
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"]=True
 
 db.init_app(app)
 
@@ -15,9 +15,9 @@ def create():
     db.create_all()
 
 
-@app.route
-def route():
-    return "Hello World!"
+# @app.route
+# def route():
+#     return "Hello World!"
 
 
 # app.register_blueprint(student, url_prefix = "/web")
